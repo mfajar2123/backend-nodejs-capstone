@@ -8,8 +8,6 @@ router.get('/', async (req, res, next) => {
   try {
     const db = await connectToDatabase()
     const collection = db.collection(process.env.MONGO_COLLECTION)
-    
-    // Initialize the query object
     const query = {}
 
     // Add the name filter to the query if the name parameter is not empty
